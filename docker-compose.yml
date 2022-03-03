@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: db
+    image: postgres
+    environment:
+      POSTGRES_USER: avt
+      POSTGRES_PASSWORD: avt_pass
+      POSTGRES_DB: avt_db
+    ports:
+      - 5433:5432
+    restart: unless-stopped
+  redis:
+    container_name: avt_redis
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6371:6379'
+    restart: unless-stopped

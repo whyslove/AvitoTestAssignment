@@ -1,0 +1,14 @@
+port: "8000"
+
+db: 
+  username: "avt"
+  host: "localhost"
+  port: "5433"
+  dbname: "avt_db"
+  sslmode: "disable"
+redis:
+  host: "localhost"
+  port: ":6371"
+  db: 0
+currency:
+  transferRateUrl: https://api.exchangerate.host/latest?base=RUB
