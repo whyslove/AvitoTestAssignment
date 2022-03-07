@@ -19,3 +19,8 @@ services:
     ports:
       - '6371:6379'
     restart: unless-stopped
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    network_mode: host
